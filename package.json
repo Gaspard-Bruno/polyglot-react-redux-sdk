@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gaspard-Bruno/polyglot-js-sdk.git"
+    "url": "git+https://github.com/Gaspard-Bruno/polyglot-react-redux-sdk.git"
   },
   "keywords": [
     "polygot"
@@ -16,9 +16,9 @@
   "author": "Gaspard+Bruno",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Gaspard-Bruno/polyglot-js-sdk/issues"
+    "url": "https://github.com/Gaspard-Bruno/polyglot-react-redux-sdk/issues"
   },
-  "homepage": "https://github.com/Gaspard-Bruno/polyglot-js-sdk#readme",
+  "homepage": "https://github.com/Gaspard-Bruno/polyglot-react-redux-sdk#readme",
   "peerDependencies": {
     "immer": "^6.0.2",
     "node-polyglot": "^2.4.0",
