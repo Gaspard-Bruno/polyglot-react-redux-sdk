@@ -124,7 +124,7 @@ const Home = () => {
 
   return (
     <div className="home-page">
-	   <h1 className="title">{t('title')}</h1>
+	<h1 className="title">{t('title')}</h1>
     </div>
   )
 }
