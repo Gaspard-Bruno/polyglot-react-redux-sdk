@@ -51,8 +51,8 @@ const {
   phrasesLoading,
   phrasesLoaded,
   phrasesError,
-  fetchPhrases: handleFetchPhrases,
-  setLocale: handleSetLocale,
+  fetchPhrases,
+  setLocale,
 } = usePolyglot(defaultUrl, defaultLocale)
 ```
 
