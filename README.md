@@ -72,7 +72,8 @@ const t = useTranslate('home')
 /*  store.js */
 
 import { createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk';
+import thunk from 'redux-thunk'
+import { reducer as polyglotReducer } from 'polyglot-react-redux-sdk'
 
 const rootReducer = combineReducers({
   ...
@@ -92,7 +93,7 @@ export default initializeStore
 /*  App.js */
 
 import React from 'react'
-import { usePolyglot } from 'polyglot-js-sdk'
+import { usePolyglot } from 'polyglot-react-redux-sdk'
 
 import Home from 'pages/Home'
 
@@ -117,7 +118,7 @@ export default App
 
 import React from 'react'
 
-import { useTranslate } from 'polyglot-js-sdk'
+import { useTranslate } from 'polyglot-react-redux-sdk'
 
 const Home = () => {
   const t = useTranslate('home')
