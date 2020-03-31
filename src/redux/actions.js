@@ -9,6 +9,15 @@ export const setLocale = (locale) => (
   }
 )
 
+export const setDefaultPhrases = (defaultPhrases) => (
+  (dispatch) => {
+    dispatch({
+      type: actionTypes.SET_DEFAULT_PHRASES,
+      payload: defaultPhrases,
+    })
+  }
+)
+
 export const fetchPhrases = (url, defaultPhrases) => (dispatch) => {
   dispatch({ type: actionTypes.FETCH_PHRASES })
 
@@ -20,13 +29,9 @@ export const fetchPhrases = (url, defaultPhrases) => (dispatch) => {
     })
     .catch((error) => {
       dispatch({ type: actionTypes.FETCH_PHRASES_FAIL, error })
-    })
-    .finally(() => {
-      if (defaultPhrases) {
         dispatch({
           type: actionTypes.SET_DEFAULT_PHRASES,
           payload: { defaultPhrases },
         })
-      }
     })
 }

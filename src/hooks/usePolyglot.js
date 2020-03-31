@@ -8,9 +8,9 @@ import {
   getPhrasesLoaded,
   getPhrasesError,
 } from '../redux/selectors'
-import { fetchPhrases, setLocale } from '../redux/actions'
+import { fetchPhrases, setLocale, setDefaultPhrases } from '../redux/actions'
 
-const usePolyglot = (defaultUrl, defaultLocale, defaultPhrases) => {
+const usePolyglot = ({defaultUrl, defaultLocale, useDefaultPhrases, defaultPhrases}) => {
   const locale = useSelector(getLocale)
   const phrases = useSelector(getPhrases)
   const phrasesLoading = useSelector(getPhrasesLoading)
@@ -29,7 +29,11 @@ const usePolyglot = (defaultUrl, defaultLocale, defaultPhrases) => {
 
   useEffect(() => {
     if (!phrasesLoaded) {
-      handleFetchPhrases(defaultUrl, defaultPhrases)
+      if (useDefaultPhrases) {
+        setDefaultPhrases(defaultPhrases)
+      } else {
+        handleFetchPhrases(defaultUrl, defaultPhrases)
+      }
     }
   }, [phrasesLoaded, handleFetchPhrases, defaultUrl, defaultPhrases])
 

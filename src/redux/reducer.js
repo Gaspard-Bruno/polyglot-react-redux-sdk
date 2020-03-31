@@ -33,6 +33,7 @@ const reducer = (state = initialState, action = {}) => {
         break
       case actionTypes.SET_DEFAULT_PHRASES:
         draft.phrases = { ...draft.phrases, default: action && action.payload && action.payload.defaultPhrases || undefined}
+        draft.phrasesLoaded = true
         break
       default:
         break
