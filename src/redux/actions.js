@@ -9,16 +9,23 @@ export const setLocale = (locale) => (
   }
 )
 
-export const fetchPhrases = (url) => (dispatch) => {
+export const fetchPhrases = (url, defaultPhrases) => (dispatch) => {
   dispatch({ type: actionTypes.FETCH_PHRASES })
 
-  
+
   return fetch(url)
     .then((response) => response.json())
     .then((data) => {
       dispatch({ type: actionTypes.FETCH_PHRASES_SUCCESS, payload: { phrases: data } })
     })
     .catch((error) => {
-      dispatch({ type: actionTypes.FETCH_PHRASES_FAIL, payload: { error } })
+      dispatch({ type: actionTypes.FETCH_PHRASES_FAIL, error })
+
+      if (defaultPhrases) {
+        dispatch({
+          type: actionTypes.SET_DEFAULT_PHRASES,
+          payload: { defaultPhrases },
+        })
+      }
     })
 }
