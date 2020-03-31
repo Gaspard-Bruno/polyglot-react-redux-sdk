@@ -32,7 +32,7 @@ const reducer = (state = initialState, action = {}) => {
         draft.phrasesError = { status: action && action.error && action.error.status || 'Error fetching phrases' }
         break
       case actionTypes.SET_DEFAULT_PHRASES:
-        draft.phrases = action && action.payload && action.payload.defaultPhrases || undefined
+        draft.phrases = { ...draft.phrases, default: action && action.payload && action.payload.defaultPhrases || undefined}
         break
       default:
         break

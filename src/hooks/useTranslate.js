@@ -9,7 +9,7 @@ const useTranslate = (prefix) => {
   const phrases = useSelector(getPhrases)
 
   const translate = useMemo(() => {
-    const p = new Polyglot({ phrases: phrases[locale] })
+    const p = new Polyglot({ phrases: phrases[locale] || phrases.default || {} })
 
     return (key, ...args) => p.t(key, ...args)
   }, [phrases, locale])
