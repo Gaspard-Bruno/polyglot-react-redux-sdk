@@ -30,7 +30,7 @@ const usePolyglot = ({defaultUrl, defaultLocale, useDefaultPhrases, defaultPhras
   useEffect(() => {
     if (!phrasesLoaded) {
       if (useDefaultPhrases) {
-        setDefaultPhrases(defaultPhrases)
+        dispatch(setDefaultPhrases(defaultPhrases))
       } else {
         handleFetchPhrases(defaultUrl, defaultPhrases)
       }

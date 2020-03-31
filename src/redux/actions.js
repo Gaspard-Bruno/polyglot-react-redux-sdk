@@ -13,7 +13,7 @@ export const setDefaultPhrases = (defaultPhrases) => (
   (dispatch) => {
     dispatch({
       type: actionTypes.SET_DEFAULT_PHRASES,
-      payload: defaultPhrases,
+      payload: { defaultPhrases },
     })
   }
 )
