@@ -53,7 +53,18 @@ const {
   phrasesError,
   fetchPhrases,
   setLocale,
-} = usePolyglot(defaultUrl, defaultLocale)
+} = usePolyglot(polyglotConfig)
+```
+
+### polyglotConfig
+A configration object to be consumed by the usePolyglot hook when starting the app
+```ts
+{
+  defaultUrl: string // URL with the translation data to be consumed by polyglot
+  defaultLocale: string //  ISO-639-1 Code
+  defaultPhrases: object // translation data to be used as a fallback or in development
+  useDefaultPhrases: boolean // force usage of defaultPhrases bypassing fetching translation data from the defaultUrl,
+}
 ```
 
 ### useTranslate
@@ -100,7 +111,7 @@ import Home from 'pages/Home'
 const polyglotProjectUrl = 'https://d8wn722pvlrac.cloudfront.net/c81e728d1124862c/all.json'
 
 const App = () => {
-  const { phrasesLoaded } = usePolyglot(polyglotProjectUrl, 'en')
+  const { phrasesLoaded } = usePolyglot(polyglotConfig)
 
   return (
     phrasesLoaded ?
