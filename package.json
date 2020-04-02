@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-default": "node -r esm  ./script.js params=$HUSKY_GIT_PARAMS"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/Gaspard-Bruno/polyglot-react-redux-sdk#readme",
   "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.0.0",
     "immer": "^6.0.2",
     "node-polyglot": "^2.4.0",
     "react-redux": "^7.2.0",
@@ -28,5 +31,8 @@
   "peerDependencies": {
     "react": "^16.13.0",
     "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
   }
 }
