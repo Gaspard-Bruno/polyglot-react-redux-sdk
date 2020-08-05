@@ -1,6 +1,6 @@
 # Polyglot SDK for React+Redux
 
-SDK for a React and Redux app architecture to easily connect to a [Polyglot](https://polyglot.gaspardbruno.com) project.
+SDK for a React and Redux app architecture to easily connect to a [Polyglot](https://polyglot.cloud) project.
 
 ## Getting started
 
@@ -108,7 +108,7 @@ import { usePolyglot } from 'polyglot-react-redux-sdk'
 
 import Home from 'pages/Home'
 
-const polyglotProjectUrl = 'https://d8wn722pvlrac.cloudfront.net/c81e728d1124862c/all.json'
+const polyglotProjectUrl = 'https://cdn.polyglot.cloud/c81e728d1124862c/all.json'
 
 const App = () => {
   const { phrasesLoaded } = usePolyglot(polyglotConfig)
