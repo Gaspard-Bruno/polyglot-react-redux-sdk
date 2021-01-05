@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Gaspard-Bruno/polyglot-react-redux-sdk#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chalk": "^4.0.0",
     "esm": "^3.2.25",
     "git-branch-is": "^3.1.0",
